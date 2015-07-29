@@ -40,11 +40,21 @@
 @timestamp-timezone: " ET";
 
 
+.gradient (@startColor: #eee, @endColor: white) {
+	background-color: @startColor;
+	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background: -webkit-linear-gradient(top, @startColor, @endColor);
+	background: -moz-linear-gradient(top, @startColor, @endColor);
+	background: -ms-linear-gradient(top, @startColor, @endColor);
+	background: -o-linear-gradient(top, @startColor, @endColor);
+}
+
 // themes
 @theme1-accent-color: #0074D9;
 
 
-@theme2-bg-color: linear-gradient(-60deg, #F9703E, #FF3859);
+@theme2-bg-color: #F9703E;
+@theme2-bg-color2: #FF3859;
 @theme2-accent-color: rgba(255,255,255,0.8);
 @theme2-text-color: #eee;
 @theme2-logo-path: url('../img/twitter-carbon-retina-ready-b.png');
@@ -53,7 +63,8 @@
 @theme2-16x9-logo-width: 100px;
 @theme2-16x9-logo-height: 100px;
 
-@theme3-bg-color: linear-gradient(-60deg, #7DBE3C, #20D9A8);
+@theme3-bg-color: #7DBE3C;
+@theme3-bg-color2: #20D9A8;
 @theme3-accent-color: rgba(0,0,0,0.5);
 @theme3-text-color: #222;
 @theme3-logo-path: url('../img/twitter-carbon-w.png');
@@ -62,7 +73,8 @@
 @theme3-16x9-logo-width: 100px;
 @theme3-16x9-logo-height: 100px;
 
-@theme4-bg-color: linear-gradient(-6deg, #023B38, #04003D);
+@theme4-bg-color: #023B38;
+@theme4-bg-color2: #04003D;
 @theme4-accent-color: rgba(255,255,255,0.8);
 @theme4-text-color: #fff;
 @theme4-logo-path: url('../img/twitter-carbon-retina-ready.png');
