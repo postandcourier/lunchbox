@@ -70,7 +70,7 @@ function processText() {
 
 function saveImage() {
     // first check if the quote actually fits
-    if (($source.offset().top + $source.height()) > $logoWrapper.offset().top) {
+    if (($source.offset().top + $source.height()) > $logoWrapper.offset().bottom) {
         alert("Your quote doesn't quite fit. Shorten the text or choose a smaller font-size.");
         return;
     }
@@ -82,9 +82,10 @@ function saveImage() {
     }
 
     // make sure source begins with em dash
-    if (!$source.text().match(/^[\u2014]/g)) {
+    /*if (!$source.text().match(/^[\u2014]/g)) {
         $source.html('&mdash;&thinsp;' + $source.text());
-    }
+    }*/
+    // Moved the em dash to css
 
     $('canvas').remove();
     processText();
@@ -137,7 +138,7 @@ $(function() {
         adjustFontSize(quote.size);
     }
     $('blockquote p').text(quote.quote);
-    $source.html('&mdash;&thinsp;' + quote.source);
+    $source.html(quote.source);
     processText();
 
     $save.on('click', saveImage);

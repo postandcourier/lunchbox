@@ -116,6 +116,12 @@ code to a remote server if required.
 """
 
 @task
+def rerender(remote='origin', reload=False):
+  require('settings', provided_by=[production, staging])
+  render.render_all()
+
+
+@task
 def deploy(remote='origin', reload=False):
     """
     Deploy the latest app to S3 and, if configured, to our servers.

@@ -250,7 +250,7 @@ canvas {
         }
 
         blockquote {
-            margin-top: 0.8em;
+            margin-top: 0.4em;
             margin-bottom: 20px;
         }
 
@@ -273,17 +273,17 @@ canvas {
         }
 
         .show-credit {
-            font-size: @base-font-size * 1.1;
+            font-size: 16px;
         }
     }
 
     .quote& {
         .left-quote {
             content:@quote-begin-symbol;
-            opacity: 0.2;
+            opacity: 0.16;
             display: block;
             position: absolute;
-            top: -0.2em;
+            top: -0.21em;
             left: @padding * 2;
             font-weight: @quote-font-weight;
             margin-left: @quote-mark-margin;
@@ -297,6 +297,7 @@ canvas {
         font-family: "Playfair Display";
         font-weight: 400;
         display: none;
+        pointer-events: none;
     }
 
     blockquote {
@@ -319,7 +320,7 @@ canvas {
             font-size: inherit;
             font-weight: inherit;
             margin: 0;
-            line-height: 110%;
+            line-height: 1.4;
 
             span {
                 line-height: inherit !important;
@@ -356,17 +357,17 @@ canvas {
     }
     
     p.source:before {
-      content: "\2014";
+      content: @source-dash;
     }
 
     .show-credit {
         display: block;
         text-transform: uppercase;
-        font-size: @base-font-size * 1.2;
+        font-size: @base-font-size * 1.1;
         margin-top: @credit-margin;
         font-weight: 100;
-        letter-spacing: 1px;
-        opacity: 0.8;
+        letter-spacing: 2px;
+        opacity: 0.4;
     }
 
     p.source,
