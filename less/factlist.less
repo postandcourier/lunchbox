@@ -174,10 +174,21 @@ canvas {
     line-height: 1 !important;
     overflow: hidden;
     color: @text-color;
+    
+    blockquote {
+      p:before {
+        color: @theme1-accent-color;
+      }
+    }
 
     &.poster-theme1 {
         background: @bg-color;
         color: @text-color;
+        blockquote {
+          p:before {
+            color: @theme1-accent-color;
+          }
+        }
         .logo-wrapper {
             background-image: @logo-path;
             background-repeat: no-repeat;
@@ -196,6 +207,11 @@ canvas {
     &.poster-theme2 {
         background: @theme2-bg-color;
         color: @theme2-text-color;
+        blockquote {
+          p:before {
+            color: @theme2-accent-color;
+          }
+        }
         .logo-wrapper {
             background: @theme2-bg-color;
             color: @theme2-text-color;
@@ -215,7 +231,16 @@ canvas {
 
 
     &.poster-theme3 {
+        background: @theme3-bg-color;
+        color: @theme3-text-color;
+        blockquote {
+          p:before {
+            color: @theme3-accent-color;
+          }
+        }
         .logo-wrapper {
+            background: @theme3-bg-color;
+            color: @theme3-text-color;
             background-image: @theme3-logo-path;
             background-repeat: no-repeat;
             background-size: @theme3-sq-logo-width @theme3-sq-logo-height;
@@ -233,6 +258,11 @@ canvas {
     &.poster-theme4 {
         background: @theme4-bg-color;
         color: @theme4-text-color;
+        blockquote {
+          p:before {
+            color: @theme4-accent-color;
+          }
+        }
         .logo-wrapper {
             background: @theme4-bg-color;
             color: @theme4-text-color;
@@ -291,6 +321,7 @@ canvas {
     
     .kicker {
         white-space: nowrap;
+        font-weight: 800;
     }
 
     blockquote {
@@ -299,7 +330,7 @@ canvas {
         border-left: none;
         font-size: inherit;
         line-height: 100%;
-        font-weight: normal;
+        font-weight: 300;
         display: block;
         overflow: visible;
 
@@ -310,7 +341,7 @@ canvas {
 
         p {
             font-size: inherit;
-            font-weight: inherit;
+            font-weight: 300;
             margin: 0;
             line-height: 110%;
             text-indent: @list-text-indent;
@@ -335,7 +366,7 @@ canvas {
 
     p.timestamp {
         font-size: @base-font-size;
-        color: @timestamp-color;
+        opacity: 0.6;
         text-transform: uppercase;
         letter-spacing: 0.1em;
         font-weight: normal;

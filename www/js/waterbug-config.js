@@ -6,36 +6,36 @@ var elementPadding = 40; // padding around the logo and credit text
 // the name of the logo object should match the value of the corresponding radio button in the HTML.
 var logos = {
     'lunchbox': {
-        whitePath: '../img/icon-lunchbox-white.svg', // path to white logo
-        blackPath: '../img/icon-lunchbox-black.svg', // path to black logo
-        w: 100, // width of logo
-        h: 80, // height of logo
-        display: 'Lunchbox'
+        whitePath: '../img/pc-waterbug.png', // path to white logo
+        blackPath: '../img/pc-waterbug.png', // path to black logo
+        w: 360.24, // width of logo
+        h: 60, // height of logo
+        display: 'Blue'
     },
     'socializr': {
-        whitePath: '../img/icon-socializr-white.svg',
-        blackPath: '../img/icon-socializr-black.svg',
-        w: 150,
-        h: 51,
-        display: 'Socializr'
+        whitePath: '../img/pc-waterbug-t.png',
+        blackPath: '../img/pc-waterbug-t.png',
+        w: 360.24,
+        h: 60,
+        display: 'Transparent'
     }
 };
 
 // logo opacity for colors
-var whiteLogoAlpha = '0.8';
-var blackLogoAlpha = '0.6';
+var whiteLogoAlpha = '1';
+var blackLogoAlpha = '1';
 
 // type
 var fontWeight = 'normal'; // font weight for credit
 var fontSize = '20pt'; // font size for credit
-var fontFace = "Helvetica"; // font family for credit
+var fontFace = "Open Sans"; // font family for credit
 var fontShadow = 'rgba(0,0,0,0.7)'; // font shadow for credit
 var fontShadowOffsetX = 0; // font shadow offset x
 var fontShadowOffsetY = 0; // font shadow offset y
 var fontShadowBlur = 10; // font shadow blur
 
 // copyright options
-var orgName = 'Your News Organization';
+var orgName = 'The Post and Courier';
 var freelanceString = 'for ' + orgName;
 
 var copyrightOptions = {
