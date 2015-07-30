@@ -97,7 +97,7 @@ var updateTimestamp = function() {
  */
 var saveImage = function() {
     // first check if the quote actually fits
-    if (($factList.offset().top + $factList.height()) > $logoWrapper.offset().top) {
+    if (($factList.offset().top + $factList.height()) > $logoWrapper.offset().bottom) {
         var tooTallMessage = "Your list is too long. Shorten the text or choose a smaller font-size.";
     }
 

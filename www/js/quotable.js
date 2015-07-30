@@ -25,14 +25,14 @@ var quotes = [
         "size": 65
     },
     {
-        "quote": "Annyong.",
-        "source": "Annyong",
-        "size": 90
+        "quote": "So, here's some advice I wish I woulda got when I was your age: Live every week like it's Shark Week.",
+        "source": "Tracey Jordan",
+        "size": 45
     },
     {
-        "quote": "STEVE HOLT!",
-        "source": "Steve Holt",
-        "size": 65
+        "quote": "Hey, nerds! Who's got two thumbs, speaks limited French, and hasn't cried once today? This moi.",
+        "source": "Liz Lemon",
+        "size": 45
     },
     {
         "quote": "Whoa, whoa, whoa. There's still plenty of meat on that bone. Now you take this home, throw it in a pot, add some broth, a potato. Baby, you've got a stew going.",
@@ -82,10 +82,9 @@ function saveImage() {
     }
 
     // make sure source begins with em dash
-    /*if (!$source.text().match(/^[\u2014]/g)) {
+    if (!$source.text().match(/^[\u2014]/g)) {
         $source.html('&mdash;&thinsp;' + $source.text());
-    }*/
-    // Moved the em dash to css
+    }
 
     $('canvas').remove();
     processText();
@@ -138,7 +137,7 @@ $(function() {
         adjustFontSize(quote.size);
     }
     $('blockquote p').text(quote.quote);
-    $source.html(quote.source);
+    $source.html('&mdash;&thinsp;' + quote.source);
     processText();
 
     $save.on('click', saveImage);
