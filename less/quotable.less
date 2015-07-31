@@ -25,8 +25,9 @@ canvas {
 .content {
     display: table;
     width: 100%;
-    max-width: 1200px;
-    min-width: 640px;
+    max-width: 1480px;
+    min-width: 1280px;
+    min-height: 1480px;
     margin: 0 auto;
 
     .poster-wrapper,
@@ -36,7 +37,9 @@ canvas {
     }
 
     .poster-wrapper {
-        width: 640px;
+        width: 1280px;
+        min-height: 1280px;
+        zoom: 0.5;
     }
 
     @media screen and (max-width: @screen-sm-max){
@@ -139,13 +142,13 @@ canvas {
 }
 
 .poster {
-    height: 640px;
-    width: 640px;
+    height: 1280px;
+    width: 1280px;
     background: @bg-color;
-    margin: @line-height;
+    margin: @line-height * 2;
     position: relative;
-    padding: @padding * 2;
-    font-size: @base-font-size * 5;
+    padding: (@padding * 2) * 2;
+    font-size: (@base-font-size * 5) * 2;
     line-height: 1 !important;
     overflow: hidden;
     color: @text-color;
@@ -157,14 +160,14 @@ canvas {
         .logo-wrapper {
             background-image: @logo-path;
             background-repeat: no-repeat;
-            background-size: @logo-sq-width @logo-sq-height;
-            width: @logo-sq-width + @padding;
-            height: @logo-sq-height + @padding;
+            background-size: @logo-sq-width * 2 @logo-sq-height * 2;
+            width: (@logo-sq-width + @padding) * 2;
+            height: (@logo-sq-height + @padding) * 2;
 
             .sixteen-by-nine& {
-                background-size: @logo-16x9-width @logo-16x9-height;
-                width: @logo-16x9-width + @padding;
-                height: @logo-16x9-height + @padding;
+                background-size: @logo-16x9-width * 2 @logo-16x9-height * 2;
+                width: (@logo-16x9-width + @padding) * 2;
+                height: (@logo-16x9-height + @padding) * 2;
             }
         }
     }
@@ -180,14 +183,14 @@ canvas {
             color: @theme2-text-color;
             background-image: @theme2-logo-path;
             background-repeat: no-repeat;
-            background-size: @theme2-sq-logo-width @theme2-sq-logo-height;
-            width: @theme2-sq-logo-width + @padding;
-            height: @theme2-sq-logo-height + @padding;
+            background-size: @theme2-sq-logo-width * 2 @theme2-sq-logo-height * 2;
+            width: (@theme2-sq-logo-width + @padding) * 2;
+            height: (@theme2-sq-logo-height + @padding) * 2;
 
             .sixteen-by-nine& {
-                background-size: @theme2-16x9-logo-width @theme2-16x9-logo-height;
-                width: @theme2-16x9-logo-width + @padding;
-                height: @theme2-16x9-logo-height + @padding;
+                background-size: @theme2-16x9-logo-width * 2 @theme2-16x9-logo-height * 2;
+                width: (@theme2-16x9-logo-width + @padding) * 2;
+                height: (@theme2-16x9-logo-height + @padding) * 2;
             }
         }
     }
@@ -204,14 +207,14 @@ canvas {
             color: @theme3-text-color;  
             background-image: @theme3-logo-path;
             background-repeat: no-repeat;
-            background-size: @theme3-sq-logo-width @theme3-sq-logo-height;
-            width: @theme3-sq-logo-width + @padding;
-            height: @theme3-sq-logo-height + @padding;
+            background-size: @theme3-sq-logo-width * 2 @theme3-sq-logo-height * 2;
+            width: (@theme3-sq-logo-width + @padding) * 2;
+            height: (@theme3-sq-logo-height + @padding) * 2;
 
             .sixteen-by-nine& {
-                background-size: @theme3-16x9-logo-width @theme3-16x9-logo-height;
-                width: @theme3-16x9-logo-width + @padding;
-                height: @theme3-16x9-logo-height + @padding;
+                background-size: @theme3-16x9-logo-width * 2 @theme3-16x9-logo-height * 2;
+                width: (@theme3-16x9-logo-width + @padding) * 2;
+                height: (@theme3-16x9-logo-height + @padding) * 2;
             }          
         }
     }
@@ -227,21 +230,21 @@ canvas {
             color: @theme4-text-color;
             background-image: @theme4-logo-path;
             background-repeat: no-repeat;
-            background-size: @theme4-sq-logo-width @theme4-sq-logo-height;
-            width: @theme4-sq-logo-width + @padding;
-            height: @theme4-sq-logo-height + @padding;
+            background-size: @theme4-sq-logo-width * 2 @theme4-sq-logo-height * 2;
+            width: (@theme4-sq-logo-width + @padding) * 2;
+            height: (@theme4-sq-logo-height + @padding) * 2;
 
             .sixteen-by-nine& {
-                background-size: @theme4-16x9-logo-width @theme4-16x9-logo-height;
-                width: @theme4-16x9-logo-width + @padding;
-                height: @theme4-16x9-logo-height + @padding;
+                background-size: @theme4-16x9-logo-width * 2 @theme4-16x9-logo-height * 2;
+                width: (@theme4-16x9-logo-width + @padding) * 2;
+                height: (@theme4-16x9-logo-height + @padding) * 2;
             }
         }
     }
 
     &.sixteen-by-nine {
-        height: 360px;
-        padding: @padding;
+        height: 720px;
+        padding: @padding * 2;
 
         .quote& {
             .left-quote {
@@ -251,12 +254,12 @@ canvas {
         }
 
         blockquote {
-            margin-top: 0.4em;
-            margin-bottom: 20px;
+            margin-top: 0.4em * 2;
+            margin-bottom: 20px * 2;
         }
 
         .logo-wrapper {
-            padding: @padding;
+            padding: @padding * 2;
 
             img {
                 width: 150px;
@@ -288,7 +291,7 @@ canvas {
             left: @padding * 2;
             font-weight: @quote-font-weight;
             margin-left: @quote-mark-margin;
-            font-size: @quote-size;
+            font-size: @quote-size * 2;
             z-index: 1;
         }
     }
@@ -348,7 +351,7 @@ canvas {
     }
 
     p.source {
-        font-size: @base-font-size * 1.5;
+        font-size: (@base-font-size * 1.5) * 2;
         font-weight: normal;
         line-height: 1.3;
         display: block;
@@ -360,7 +363,7 @@ canvas {
     .show-credit {
         display: block;
         text-transform: uppercase;
-        font-size: @base-font-size * 1.1;
+        font-size: (@base-font-size * 1.1) * 2;
         margin-top: @credit-margin;
         font-weight: 100;
         letter-spacing: 2px;
@@ -382,20 +385,20 @@ canvas {
         bottom: 0;
         right: 0;
         text-align: right;
-        padding:  @padding @padding * 2 @padding * 2;
+        padding:  @padding * 4 @padding * 4 @padding * 4;
         margin: 0;
         font-size: 46px;
         background: @bg-color;
         background-image: @logo-path;
         background-repeat: no-repeat;
-        background-size: @logo-sq-width @logo-sq-height;
-        width: @logo-sq-width + @padding;
-        height: @logo-sq-height + @padding;
+        background-size: @logo-sq-width * 2 @logo-sq-height * 2;
+        width: @logo-sq-width * 2 + @padding;
+        height: @logo-sq-height * 2 + @padding;
 
         .sixteen-by-nine& {
-            background-size: @logo-16x9-width @logo-16x9-height;
-            width: @logo-16x9-width + @padding;
-            height: @logo-16x9-height + @padding;
+            background-size: @logo-16x9-width * 2 @logo-16x9-height * 2;
+            width: @logo-16x9-width * 2 + @padding;
+            height: @logo-16x9-height * 2 + @padding;
         }
 
         .logo {

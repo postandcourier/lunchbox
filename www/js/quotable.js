@@ -22,22 +22,22 @@ var quotes = [
     {
         "quote": "Yes, I have smoked crack cocaine",
         "source": "Toronto Mayor Rob Ford",
-        "size": 65
+        "size": 130
     },
     {
         "quote": "So, here's some advice I wish I woulda got when I was your age: Live every week like it's Shark Week.",
         "source": "Tracey Jordan",
-        "size": 45
+        "size": 90
     },
     {
         "quote": "Hey, nerds! Who's got two thumbs, speaks limited French, and hasn't cried once today? This moi.",
         "source": "Liz Lemon",
-        "size": 45
+        "size": 90
     },
     {
         "quote": "Whoa, whoa, whoa. There's still plenty of meat on that bone. Now you take this home, throw it in a pot, add some broth, a potato. Baby, you've got a stew going.",
         "source": "Carl Weathers",
-        "size": 40
+        "size": 80
     }
 ];
 
